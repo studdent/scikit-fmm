@@ -74,12 +74,12 @@ double travelTimeMarcher::solveQuadratic(int i, const double &a,
                                          const double &b,
                                          double &c)
 {
-  c -= 1/pow(speed_[i],2);
-  double r0=0;
-  double det = pow(b,2)-4*a*c;
-  if (det>=0)
+  c -= 1.0/pow(speed_[i],2);
+  double r0 = 0.0;
+  double discriminant = pow(b,2) - 4.0*a*c;
+  if (discriminant >= 0.0)
   {
-    r0 = (-b+sqrt(det))/2.0/a;
+    r0 = (-b + sqrt(discriminant))/2.0/a;
   }
   else
   {
